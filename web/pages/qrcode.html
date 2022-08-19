@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>API Mocker - QR Code</title>
+    <link rel="shortcut icon" href="/img/parrot-32.ico">
+</head>
+<body>
+    <div id="parrot-mock-web-mark"></div>
+    <div id="vue-container">
+        <div class="input-wrapper">
+            <input type="text" placeholder="http://" @input="onInput">
+        </div>
+        <div class="opt-wrapper" @click="onResetClicked">
+            <input type="radio" :checked="isReset ? 'checked' : ''"></input>
+            <label>reset</label>
+        </div>
+        <div class="qrcode-wrapper" @click="onQrcodeClicked">
+            <qrcode :val="url" :size="size"></qrcode>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/dist/qrcode.js"></script>
+</body>
+</html>
